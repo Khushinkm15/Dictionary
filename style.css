@@ -1,0 +1,210 @@
+/* Reset margins and padding, set box-sizing and default font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+/* Full-screen wrapper with gradient background */
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./inaki-del-olmo-NIJuEQw0RKg-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensures the image covers the entire element */
+    background-position: center; /* Centers the image */
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Content box with gradient background */
+.content {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 720px;
+    background: rgb(250,251,165);
+    background: radial-gradient(circle, rgba(250,251,165,1) 0%, rgba(247,247,185,1) 100%, rgba(245,240,240,1) 100%);
+    justify-content: flex-start;
+    align-items: start;
+    margin-top: 20px;
+    border-radius: 30px;
+    padding: 40px;
+    gap: 10px;
+    overflow: auto;
+    margin-bottom: 40px;
+}
+.content::-webkit-scrollbar {
+    width: 0;  /* This will hide the scrollbar */
+    background: transparent; }
+.header{
+    font-size: 60px;
+letter-spacing: 6px;
+color: rgb(255, 238, 2);
+margin-top: 20px;
+}
+.partOfSpeech{
+    font-size: 18px;
+    font-weight: 700;
+    
+}
+.name{
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.pronounciation{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    gap: 15px;
+}
+.pronounciation svg{
+    background-color: black;
+    border-radius: 50%;
+    padding: 3px;
+}
+.pronounciation p{
+    font-size: 20px;
+    font-weight: 500;
+}
+.functions{
+    display: flex;
+    flex-direction: row;
+    gap: 90px;
+    margin-top: 50px;
+    cursor: pointer;
+    font-size: 13px;
+    color: rgb(69, 64, 64);
+    }
+    @media screen and (max-width: 768px) {
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            width: 90%;
+            max-width: 500px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+    
+        .header {
+            font-size: 40px;
+            letter-spacing: 4px;
+        }
+    
+        .partOfSpeech {
+            font-size: 16px;
+        }
+    
+        .name {
+            font-size: 32px;
+        }
+    
+        .pronounciation p {
+            font-size: 16px;
+        }
+    
+        .functions {
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
+    
+        .meaning h3, .examples h3, .synonyms h3, .antonyms h3 {
+            font-size: 14px;
+            padding: 6px;
+            margin-bottom: 6px;
+        }
+    
+        .pronounciation {
+            gap: 10px;
+        }
+    
+        .searchSpace {
+            margin-left: none;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+    
+        .searchSpace input {
+            width: 200px;
+            height: 30px;
+            padding: 10px;
+            font-size: 12px;
+        }
+    
+        .searchSpace button svg {
+            height: 28px;
+            width: 28px;
+            padding: 4px;
+        }
+    }
+        
+    
+.meaning h3 , .examples h3, .synonyms h3, .antonyms h3  {
+    border: 2px solid rgba(119, 114, 114, 0.495);
+    padding: 10px;
+    border-radius: 55px;
+    margin-bottom: 30px;
+    opacity: 100%;
+}
+
+
+.examples .active , .antonyms .active, .synonyms .active{
+    opacity: 100%;
+}
+.meaning ul, .examples ul , .synonyms ul, .antonyms ul {
+    list-style-type:square;
+    padding-left: 15px;
+   }
+
+
+.meaning .active, .examples .active, .synonyms .active, .antonyms .active {
+    opacity: 100%;
+}
+.searchSpace{
+ margin-left: 170px;  
+ /* width: 100px; */
+ margin-bottom: 16px;
+ display: flex;
+ align-items: center;
+ gap: 10px;
+}
+.searchSpace button{
+    all: unset;
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+    padding: 0 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.searchSpace button svg{
+    background-color: rgb(94, 167, 194);
+    padding: 6px;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+}
+.searchSpace  input{
+    width: 250px;
+    height: 32px;
+border-radius: 50px;
+padding: 15px;
+background-color: rgba(239, 227, 227, 0.718);
+}
+.searchSpace input::placeholder{
+    /* padding-left: 9px; */
+    font-size: 14px;
+    color: rgba(164, 136, 136, 0.996);
+}
+.mainSection{
+    display: none;
+}
